@@ -1,0 +1,30 @@
+algoritmo "Insertion sort"
+
+var
+  v: vetor[0..5] de inteiro
+  i, j, c: inteiro
+inicio
+  v[1] <- 5
+  v[2] <- 1
+  v[3] <- 8
+  v[4] <- 11
+  v[5] <- 4
+
+  para i de 2 ate 5 faca
+    c <- v[i]
+    j <- i - 1
+
+    enquanto (j > 0) e (v[j] > c) faca
+
+      v[j+1] <- v[j]
+      j <- j -1
+    fimenquanto
+    v[j+1] <- c
+  fimpara
+
+  para i de 1 ate 5 faca
+    escreval("")
+    escreval(v[i])
+  fimpara
+
+fimalgoritmo
